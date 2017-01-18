@@ -1,0 +1,62 @@
+Janelynn Camingue --jcamingu@ucsc.edu
+Lab section: 01F MW TA: John Kolar
+Due 11/20/2016
+Lab Partner: None
+
+Title:
+Lab 5: Introduction to Uno32 and MIPS
+--------------------------------------------------------------------------------------
+Purpose:
+The purpose of this lab was to get used to the Uno32 and MIPS language. We were able
+to finally work with actual hardware. We were introduced to getting used to running
+code on an embedded processor.
+--------------------------------------------------------------------------------------
+Procedure:
+For Part 1, I read the resources given to us and mapped the pins and buttons. I was
+a bit still confused so I went to MSI to get more insight on how to actually connect 
+the software to the hardware, and then it made sense as to why PORT, TRIS, and LAT 
+end with a letter like E, D, F, etc. It was because the letters corresponded to either
+the switches, push buttons, or LEDs, which was why mapping was crucial to do in the
+beginning of the lab. Then, I visually drew out the plan for my program because 
+bitmasking can get confusing. Basically, I drew out what buttons correspond to what 
+and then drew out where I want to end up, which gave me the result of the bitmask in
+binary, and then I converted it to hex. I had trouble with turning on the light in the 
+beginning, but MSI helped clear that up. Part 1 was easier than Part 2. 
+
+For Part 2, I had loads of trouble because I didn't understand what $a0 was exactly
+supposed to do. I went to multiple sections for MSI, which helped tremendously. After
+I understood exactly what I was supposed to do, I wrote out pseudocode and drew a 
+simple picture to show my logic. The way I say it, the first LED is the only one on 
+and then it shifts left until the 8th LED and then travels from the 8th LED back to 
+the first one. I mapped out two labels for LEFT and RIGHT with the argument that if 
+the LED reached the end, then it would "bounce" back fast or slow depending on how 
+many switches were on. The LED turns off and on which makes it look like it is 
+bouncing. I think that the mydelay was the hardest part because I did not understand
+it until a TA explained it to me. 
+--------------------------------------------------------------------------------------
+What Went Wrong Or What Were the Challenges?:
+Things that went wrong were small things, like confusing reading and writing and 
+choosing the correct bitmask. For part 2, what went wrong was that all of my LEDs were
+on instead of just one. Also, making the mydelay and getting input was difficult. I did 
+not understand the math until I found out why the LED got faster when you turn on the
+switches. For part 1, the pushbuttons were the ones that were not turining on 
+completely. For example, the middle two pushbuttons would not turn on the corresponding
+two LEDs. At first, I was confused on mapping the pins. At first, I thought we had to 
+map all 43 of the pins until someone cleared it up on Piazza that we only needed to 
+map the pins that were were using in this lab. 
+--------------------------------------------------------------------------------------
+Other information (Answer any question(s) posted in the assignment):
+I do not see any questions on the lab manual.
+--------------------------------------------------------------------------------------
+Conclusion:
+I have never worked with hardware before, so I was glad we got to do this lab. Even 
+though I wanted to pull my hair out at some points, it was still fun. I just wished 
+that we went over MIPS more. I was also glad there was an extension. After I finished
+the lab, I had fun playing with it. My UNO32 and PIC32 are kind of janky, so debugging
+my code was kind of a pain because I had to keep opening and closing windows and 
+unplugging and plugging in USBs.
+EXTRA:
+I think it would have been better to split Part 1 and Part 2 so there would not have
+been an extension in the first place.
+--------------------------------------------------------------------------------------
+
